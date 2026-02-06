@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>IronCode Motivation | Discipline Over Motivation</title>
-
   <meta charset="UTF-8">
+  <title>IronCode Motivation</title>
+  <meta name="description" content="Fitness edits that entertain, motivate, and hit different. Discipline over motivation.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IronCode Motivation – Fitness edits that entertain, motivate, and hit different. Built on discipline and consistency.">
-  <meta name="keywords" content="fitness motivation, gym motivation, bodybuilding, discipline, ironcode motivation">
-  <meta name="author" content="IronCode Motivation">
-
-  <meta property="og:title" content="IronCode Motivation">
-  <meta property="og:description" content="Train your mind. Build your body. Discipline over motivation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ajay95386-rgb.github.io/ironcodemotivation/">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,28 +18,67 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<header class="fade-in">
-  <h1>IRONCODE MOTIVATION</h1>
-  <p>Fitness edits that entertain, motivate, and hit different.</p>
-</header>
+<section class="hero reveal">
+  <div>
+    <h1>IRONCODE MOTIVATION</h1>
+    <p>Fitness edits that entertain, motivate, and hit different.</p>
 
-<section class="section fade-in">
-  <h2>Train Your Mind. Build Your Body.</h2>
-  <p>Discipline over motivation. Consistency over excuses.</p>
-
-  <div class="buttons">
-    <a class="btn-yt" href="https://www.youtube.com/@Ironcodemotivation" target="_blank">Watch on YouTube</a>
-    <a class="btn-ig" href="https://instagram.com/ironcodemotivation" target="_blank">Follow on Instagram</a>
+    <a class="btn btn-primary" href="https://www.youtube.com/@Ironcodemotivation" target="_blank">
+      Watch on YouTube
+    </a>
+    <a class="btn btn-secondary" href="https://instagram.com/ironcodemotivation" target="_blank">
+      Follow on Instagram
+    </a>
   </div>
 </section>
 
-<div class="stats fade-in">
-  <div><h2>250+</h2><p>Videos</p></div>
-  <div><h2>5.7L+</h2><p>Views</p></div>
-  <div><h2>10+</h2><p>Years</p></div>
-</div>
+<section class="section reveal">
+  <div class="stats">
+    <div>
+      <h2>250+</h2>
+      <p>Videos</p>
+    </div>
+    <div>
+      <h2>5.7L+</h2>
+      <p>Views</p>
+    </div>
+    <div>
+      <h2>10+</h2>
+      <p>Years</p>
+    </div>
+  </div>
+</section>
 
-<section class="section fade-in">
-  <h2>Latest Videos</h2>
-  <div class="responsive-video">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=UUDJdKWGi3QRltPMmfuXq
+<section class="section reveal">
+  <h2 style="text-align:center;margin-bottom:40px;">Latest Videos</h2>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=UUDJdKWGi3QRltPMmfuXqlwg&rel=0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  © IronCode_Motivation — Discipline Over Motivation
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
+</body>
+</html>
