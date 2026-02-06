@@ -181,3 +181,20 @@ footer {
   font-size: 1.1rem;
   text-align: center;
 }
+
+<!-- BMI CALCULATOR -->
+<section id="bmi" class="section reveal">
+  <h2 style="text-align:center;margin-bottom:40px;">
+    BMI Calculator
+  </h2>
+
+  <div class="calculator">
+    <input type="number" id="bmiWeight" placeholder="Weight (kg)">
+    <input type="number" id="bmiHeight" placeholder="Height (cm)">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="bmiResult" class="bmi-result"></div>
+  </div>
+</section>
+
