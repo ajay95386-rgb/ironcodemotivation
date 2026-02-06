@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About | IronCode Motivation</title>
   <meta charset="UTF-8">
+  <title>About | IronCode Motivation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About IronCode Motivation — Discipline over motivation.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,20 +18,39 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<header class="fade-in">
-  <h1>About IronCode</h1>
-  <p>Built on discipline since 2014</p>
-</header>
+<section class="hero reveal">
+  <div>
+    <h1>About IronCode</h1>
+    <p>Built on discipline. Grown by consistency.</p>
+  </div>
+</section>
 
-<section class="section fade-in">
+<section class="section reveal">
   <div class="card">
     <p>
-      IronCode Motivation is a fitness mindset brand focused on discipline,
-      consistency, and long-term growth.
+      IronCode Motivation is about real progress.
+      No shortcuts. No hype. Just years of showing up,
+      training the mind, and building the body.
     </p>
   </div>
 </section>
 
-<footer>© IronCode_Motivation</footer>
+<footer>
+  © IronCode_Motivation
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
 </body>
 </html>
