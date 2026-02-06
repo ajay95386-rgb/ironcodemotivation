@@ -174,3 +174,10 @@ footer {
   padding: 40px;
   opacity: 0.5;
 }
+
+/* BMI CALCULATOR */
+.bmi-result {
+  margin-top: 18px;
+  font-size: 1.1rem;
+  text-align: center;
+}
