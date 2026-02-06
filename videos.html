@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Videos | IronCode Motivation</title>
   <meta charset="UTF-8">
+  <title>Videos | IronCode Motivation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="All IronCode Motivation videos. Auto-updated directly from YouTube.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,18 +18,39 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<header class="fade-in">
-  <h1>All Videos</h1>
-  <p>Every upload. Auto-updated.</p>
-</header>
-
-<section class="section fade-in">
-  <div class="responsive-video">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=UUDJdKWGi3QRltPMmfuXqlwg"
-      frameborder="0" allowfullscreen></iframe>
+<section class="hero reveal">
+  <div>
+    <h1>All Videos</h1>
+    <p>Every upload. Auto-updated.</p>
   </div>
 </section>
 
-<footer>© IronCode_Motivation</footer>
+<section class="section reveal">
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=UUDJdKWGi3QRltPMmfuXqlwg&rel=0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  © IronCode_Motivation
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
 </body>
 </html>
