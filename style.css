@@ -1,200 +1,104 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Inter, system-ui, sans-serif;
-  background: radial-gradient(circle at top, #111 0%, #000 65%);
-  color: #fff;
-  line-height: 1.6;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:radial-gradient(circle at top,#111 0%,#000 65%);
+  color:#fff;line-height:1.6
 }
 
 /* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(14px);
-  background: rgba(0,0,0,0.55);
-  padding: 18px;
-  text-align: center;
+nav{
+  position:sticky;top:0;z-index:999;
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(12px);
+  padding:18px;text-align:center
 }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 14px;
-  opacity: 0.75;
-  font-weight: 500;
+nav a{
+  color:#fff;text-decoration:none;
+  margin:0 14px;opacity:.75
 }
+nav a:hover{opacity:1}
 
-nav a:hover {
-  opacity: 1;
-}
-
-/* HERO WITH FITNESS IMAGE */
-.hero {
-  min-height: 100vh;
+/* HERO */
+.hero{
+  min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
-    url("https://images.unsplash.com/photo-1517963879433-6ad2b056d712");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+  url("https://images.unsplash.com/photo-1517963879433-6ad2b056d712");
+  background-size:cover;background-position:center;
+  background-attachment:fixed;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center
 }
-
-.hero h1 {
-  font-size: 4rem;
-  letter-spacing: 3px;
-}
-
-.hero p {
-  margin-top: 14px;
-  opacity: 0.8;
-}
+.hero h1{font-size:4rem;letter-spacing:3px}
+.hero p{opacity:.8;margin-top:12px}
 
 /* BUTTONS */
-.btn {
-  display: inline-block;
-  margin: 28px 10px 0;
-  padding: 14px 34px;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: all 0.25s ease;
+.btn{
+  display:inline-block;margin:26px 10px 0;
+  padding:14px 34px;border-radius:999px;
+  font-weight:600;transition:.25s
 }
-
-.btn-primary {
-  background: linear-gradient(135deg, #ff0000, #c80000);
-  color: #fff;
-  box-shadow: 0 18px 40px rgba(255,0,0,0.45);
+.btn-primary{
+  background:linear-gradient(135deg,#ff0000,#c80000);
+  color:#fff;box-shadow:0 18px 40px rgba(255,0,0,.45)
 }
+.btn-secondary{background:#222;color:#fff}
+.btn:hover{transform:translateY(-4px) scale(1.05)}
 
-.btn-secondary {
-  background: #222;
-  color: #fff;
-}
-
-.btn:hover {
-  transform: translateY(-4px) scale(1.05);
-}
-
-/* SECTIONS */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 120px 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-/* STATS */
-.stats {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.stats h2 {
-  font-size: 3rem;
-  background: linear-gradient(135deg, #fff, #aaa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.stats p {
-  opacity: 0.6;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* SECTION */
+.section{
+  max-width:1100px;margin:auto;
+  padding:120px 20px;
+  border-top:1px solid rgba(255,255,255,.06)
 }
 
 /* VIDEO GRID */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
 }
-
-.video-grid iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  border: none;
-  box-shadow: 0 30px 90px rgba(0,0,0,0.85);
+.video-grid iframe{
+  width:100%;aspect-ratio:16/9;
+  border-radius:18px;border:none;
+  box-shadow:0 30px 90px rgba(0,0,0,.85)
 }
 
 /* CARDS */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 30px;
-  border-radius: 18px;
-  transition: all 0.35s ease;
+.card{
+  background:rgba(255,255,255,.06);
+  padding:30px;border-radius:18px;
+  transition:.3s
 }
+.card:hover{transform:translateY(-8px)}
 
-.card:hover {
-  transform: translateY(-8px);
-  background: rgba(255,255,255,0.08);
+/* CALCULATORS */
+.calculator{
+  max-width:420px;margin:auto;
+  background:rgba(255,255,255,.06);
+  padding:30px;border-radius:20px
 }
-
-/* FLOAT ANIMATION */
-.float {
-  animation: float 4s ease-in-out infinite;
+.calculator input,
+.calculator select{
+  width:100%;padding:12px;margin-bottom:14px;
+  border:none;border-radius:10px;
+  background:#111;color:#fff
 }
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
+.calculator button{
+  width:100%;padding:14px;border:none;
+  border-radius:999px;font-weight:bold;
+  background:linear-gradient(135deg,#ff0000,#c80000);
+  color:#fff;cursor:pointer
 }
+.result{text-align:center;margin-top:16px}
 
-/* SCROLL REVEAL */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.9s ease;
+/* SCROLL ANIMATION */
+.reveal{opacity:0;transform:translateY(50px)}
+.reveal.active{
+  opacity:1;transform:translateY(0);
+  transition:.9s ease
 }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.5;
-}
-
-/* BMI CALCULATOR */
-.bmi-result {
-  margin-top: 18px;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-<!-- BMI CALCULATOR -->
-<section id="bmi" class="section reveal">
-  <h2 style="text-align:center;margin-bottom:40px;">
-    BMI Calculator
-  </h2>
-
-  <div class="calculator">
-    <input type="number" id="bmiWeight" placeholder="Weight (kg)">
-    <input type="number" id="bmiHeight" placeholder="Height (cm)">
-
-    <button onclick="calculateBMI()">Calculate BMI</button>
-
-    <div id="bmiResult" class="bmi-result"></div>
-  </div>
-</section>
-
+footer{text-align:center;padding:40px;opacity:.5}
