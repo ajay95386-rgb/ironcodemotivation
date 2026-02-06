@@ -2,10 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IronCode Motivation</title>
+
+  <!-- SEO -->
+  <title>IronCode Motivation | Fitness Calculators, Videos & Discipline</title>
+  <meta name="description" content="IronCode Motivation offers fitness videos, BMR & calorie calculators, workout split tools, fat loss and muscle gain guidance.">
+  <meta name="keywords" content="fitness calculator, bmr calculator, calorie calculator, fat loss, muscle gain, workout split, fitness motivation">
+  <meta name="author" content="IronCode Motivation">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fitness calculators, workouts, and discipline-based training.">
+
+  <!-- SOCIAL PREVIEW -->
+  <meta property="og:title" content="IronCode Motivation | Discipline Over Motivation">
+  <meta property="og:description" content="Fitness tools, videos & discipline-based training.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ajay95386-rgb.github.io/ironcodemotivation/">
+  <meta property="og:image" content="https://ajay95386-rgb.github.io/ironcodemotivation/preview.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IronCode Motivation">
+  <meta name="twitter:description" content="Fitness tools, workouts & discipline.">
+  <meta name="twitter:image" content="https://ajay95386-rgb.github.io/ironcodemotivation/preview.jpg">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="./style.css">
+
+  <!-- GOOGLE ANALYTICS (ADD YOUR ID LATER) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
 </head>
 
 <body>
@@ -17,22 +44,16 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero reveal">
   <div>
     <h1>IRONCODE MOTIVATION</h1>
     <p>Discipline over motivation. Consistency over excuses.</p>
 
-    <a class="btn btn-primary" href="https://www.youtube.com/@Ironcodemotivation" target="_blank">
-      YouTube
-    </a>
-    <a class="btn btn-secondary" href="https://instagram.com/ironcodemotivation" target="_blank">
-      Instagram
-    </a>
+    <a class="btn btn-primary" href="https://www.youtube.com/@Ironcodemotivation" target="_blank">YouTube</a>
+    <a class="btn btn-secondary" href="https://instagram.com/ironcodemotivation" target="_blank">Instagram</a>
   </div>
 </section>
 
-<!-- VIDEOS -->
 <section id="videos" class="section reveal">
   <h2 style="text-align:center;margin-bottom:40px;">Featured Videos</h2>
 
@@ -44,11 +65,9 @@
   </div>
 </section>
 
-<!-- TOOLS -->
 <section id="tools" class="section reveal">
   <h2 style="text-align:center;margin-bottom:40px;">Fitness Tools</h2>
 
-  <!-- BMR -->
   <div class="calculator">
     <input id="age" type="number" placeholder="Age">
     <input id="weight" type="number" placeholder="Weight (kg)">
@@ -69,128 +88,39 @@
     <button onclick="calcBMR()">Calculate Calories</button>
     <div id="bmrResult" class="result"></div>
   </div>
-
-  <br><br>
-
-  <!-- BMI -->
-  <div class="calculator">
-    <input id="bmiW" type="number" placeholder="Weight (kg)">
-    <input id="bmiH" type="number" placeholder="Height (cm)">
-    <button onclick="calcBMI()">Calculate BMI</button>
-    <div id="bmiResult" class="result"></div>
-  </div>
-
-  <br><br>
-
-  <!-- GOAL -->
-  <div class="calculator">
-    <select id="goal">
-      <option value="">Select Goal</option>
-      <option value="fat">Fat Loss</option>
-      <option value="muscle">Muscle Gain</option>
-    </select>
-    <button onclick="goalPlan()">Show Plan</button>
-    <div id="goalResult" class="result"></div>
-  </div>
-
-  <br><br>
-
-  <!-- WORKOUT -->
-  <div class="calculator">
-    <select id="days">
-      <option value="">Workout Days</option>
-      <option value="3">3 Days</option>
-      <option value="4">4 Days</option>
-      <option value="5">5 Days</option>
-    </select>
-    <button onclick="workoutPlan()">Recommend Split</button>
-    <div id="workoutResult" class="result"></div>
-  </div>
-
-  <br><br>
-
-  <!-- PROTEIN -->
-  <div class="calculator">
-    <input id="pweight" type="number" placeholder="Weight (kg)">
-    <button onclick="proteinCalc()">Protein Intake</button>
-    <div id="proteinResult" class="result"></div>
-  </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section reveal">
   <div class="card" style="text-align:center;">
     <h2>Contact</h2>
     <p>
-      <a href="mailto:AJAY95386@gmail.com" style="color:#fff;">
-        AJAY95386@gmail.com
-      </a>
+      <a href="mailto:AJAY95386@gmail.com" style="color:#fff;">AJAY95386@gmail.com</a>
     </p>
   </div>
 </section>
 
 <footer>
-  © IronCode Motivation — Discipline Over Motivation
+  © IronCode Motivation
 </footer>
 
 <script>
-/* SCROLL REVEAL */
-const reveals = document.querySelectorAll(".reveal");
-function revealOnScroll() {
-  reveals.forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 120) {
+const reveals=document.querySelectorAll(".reveal");
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-120){
       el.classList.add("active");
     }
   });
 }
-window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("scroll",revealOnScroll);
 revealOnScroll();
 
-/* CALCULATORS */
-function calcBMR() {
-  const a = age.value;
-  const w = weight.value;
-  const h = height.value;
-  const g = gender.value;
-  const act = activity.value;
-
-  if (!a || !w || !h || !g) {
-    bmrResult.innerHTML = "Fill all fields.";
-    return;
-  }
-
-  const bmr = g === "m"
-    ? 10*w + 6.25*h - 5*a + 5
-    : 10*w + 6.25*h - 5*a - 161;
-
-  bmrResult.innerHTML =
-    `Maintenance Calories: <strong>${Math.round(bmr * act)}</strong> kcal/day`;
-}
-
-function calcBMI() {
-  const bmi = (bmiW.value / ((bmiH.value / 100) ** 2)).toFixed(1);
-  bmiResult.innerHTML = `BMI: <strong>${bmi}</strong>`;
-}
-
-function goalPlan() {
-  goalResult.innerHTML =
-    goal.value === "fat"
-      ? "Eat 300–500 kcal deficit. Lift + walk daily."
-      : "Eat 300 kcal surplus. Lift heavy + rest.";
-}
-
-function workoutPlan() {
-  workoutResult.innerHTML =
-    days.value === "3"
-      ? "Full Body (3x/week)"
-      : days.value === "4"
-      ? "Upper / Lower Split"
-      : "Push Pull Legs (PPL)";
-}
-
-function proteinCalc() {
-  proteinResult.innerHTML =
-    `Protein Intake: <strong>${Math.round(pweight.value * 1.8)}</strong> g/day`;
+function calcBMR(){
+  let a=age.value,w=weight.value,h=height.value;
+  let g=gender.value,act=activity.value;
+  if(!a||!w||!h||!g){bmrResult.innerHTML="Fill all fields";return;}
+  let bmr=g==="m"?10*w+6.25*h-5*a+5:10*w+6.25*h-5*a-161;
+  bmrResult.innerHTML=`Maintenance Calories: <b>${Math.round(bmr*act)}</b> kcal/day`;
 }
 </script>
 
