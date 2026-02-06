@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Contact | IronCode Motivation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,16 +17,26 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<header>
+<header class="fade-in">
   <h1>Contact</h1>
   <p>Collaborations & business inquiries</p>
 </header>
 
-<section class="section">
+<section class="section fade-in">
   <div class="card">
-    <p>Email: (add later)</p>
-    <p>Instagram: @ironcodemotivation</p>
-    <p>YouTube: IronCode_Motivation</p>
+    <form action="mailto:AJAY95386@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px;margin-bottom:10px;">
+      <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:12px;margin-bottom:10px;">
+      <textarea name="message" placeholder="Your Message" required style="width:100%;padding:12px;height:120px;"></textarea>
+      <br><br>
+      <button type="submit" style="padding:14px 30px;background:#e10600;border:none;border-radius:30px;color:#fff;font-weight:bold;">
+        Send Message
+      </button>
+    </form>
+
+    <p style="margin-top:10px;opacity:0.7;">
+      Or email directly: <strong>AJAY95386@gmail.com</strong>
+    </p>
   </div>
 </section>
 
