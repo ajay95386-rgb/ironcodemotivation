@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
+
+    <video:video>
+      <video:title>IronCode Motivation – Discipline Over Motivation</video:title>
+      <video:description>High intensity gym motivation workout video for discipline, fitness and mindset.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=Zv_xvvoHw6w</video:content_loc>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/Zv_xvvoHw6w</video:player_loc>
+      <video:duration>330</video:duration>
+      <video:publication_date>2024-01-01</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+
+  </url>
+
+</urlset>
