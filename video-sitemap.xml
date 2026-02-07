@@ -2,64 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
-  <!-- VIDEO 1 -->
   <url>
     <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
-    <video:video>
-      <video:title>IronCode Motivation – Discipline Over Motivation</video:title>
-      <video:description>High intensity gym motivation workout video for discipline, fitness and mindset.</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=Zv_xvvoHw6w</video:content_loc>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/Zv_xvvoHw6w</video:player_loc>
-      <video:duration>330</video:duration>
-      <video:publication_date>2024-01-01</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
 
-  <!-- VIDEO 2 -->
-  <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
     <video:video>
-      <video:title>Hard Work Beats Talent – Gym Motivation</video:title>
-      <video:description>Powerful gym motivation video about discipline, hard work and consistency.</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/jt3r-z0niRQ/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=jt3r-z0niRQ</video:content_loc>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/jt3r-z0niRQ</video:player_loc>
-      <video:duration>360</video:duration>
-      <video:publication_date>2024-01-05</video:publication_date>
+      <video:title>IronCode Motivation – Workout & Discipline Videos</video:title>
+      <video:description>Latest fitness motivation, workouts and discipline mindset videos from IronCode Motivation.</video:description>
+      <video:thumbnail_loc>
+        https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg
+      </video:thumbnail_loc>
+      <video:player_loc allow_embed="yes">
+        https://www.youtube.com/embed/videoseries?list=PLMY2oMQzbBSBp2yKUf3vOgkaATIHLX4xm
+      </video:player_loc>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
-  </url>
 
-  <!-- VIDEO 3 -->
-  <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
-    <video:video>
-      <video:title>No Excuses – Workout Motivation</video:title>
-      <video:description>Gym workout motivation video focused on no excuses and daily discipline.</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/GdG4-WHF3GY/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=GdG4-WHF3GY</video:content_loc>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/GdG4-WHF3GY</video:player_loc>
-      <video:duration>300</video:duration>
-      <video:publication_date>2024-01-10</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
-
-  <!-- VIDEO 4 -->
-  <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
-    <video:video>
-      <video:title>Build Muscle & Mindset – Fitness Motivation</video:title>
-      <video:description>Fitness motivation video about muscle building, mindset and consistency.</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/JPD4k6PXSpc/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=JPD4k6PXSpc</video:content_loc>
-      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/JPD4k6PXSpc</video:player_loc>
-      <video:duration>345</video:duration>
-      <video:publication_date>2024-01-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
 
 </urlset>
