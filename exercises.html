@@ -2,184 +2,215 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Exercises | IronCode Motivation</title>
+<title>Exercise Library | IronCode Motivation</title>
 
-<meta name="description" content="Visual exercise guide with animated anatomy-style athlete performing chest, back, legs, arms and abs exercises." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Interactive exercise library with anatomy-style workout videos. Learn correct gym exercise form.">
+<meta name="robots" content="max-image-preview:large">
 
 <style>
-html{scroll-behavior:smooth}
+:root{
+  --bg:#0b0b0b;
+  --panel:#111;
+  --accent:#00c853;
+  --text:#ffffff;
+}
+*{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Arial;
-  background:#0b0b0b;
-  color:#fff
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
 }
 
-header{
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#000;
+  padding:14px;
   text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(#000c,#000c),
-  url("https://images.unsplash.com/photo-1599058917212-d750089bc07d?auto=format&fit=crop&w=1600&q=80")
-  center/cover no-repeat
+  z-index:10;
+}
+nav a{
+  color:#fff;
+  margin:0 14px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 20px
-}
-
-h1{font-size:48px}
-h2{color:#00c853;margin-bottom:20px}
-
-.exercise-block{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  align-items:center;
-  margin-bottom:80px
-}
-
-.anatomy{
-  height:320px;
-  border-radius:18px;
+/* HERO */
+.hero{
+  padding:120px 20px 60px;
+  text-align:center;
   background:
-    radial-gradient(circle at center,#444 0%,#111 70%);
+    linear-gradient(#000c,#000c),
+    url("preview.jpg") center/cover no-repeat;
+}
+.hero h1{
+  font-size:46px;
+  letter-spacing:2px;
+}
+.hero p{opacity:.8}
+
+/* LAYOUT */
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 20px;
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:24px;
+}
+@media(max-width:900px){
+  .container{grid-template-columns:1fr}
+}
+
+/* SIDEBAR */
+.sidebar{
+  background:var(--panel);
+  border-radius:16px;
+  padding:20px;
+}
+.sidebar h2{
+  color:var(--accent);
+  margin-top:20px;
+}
+.sidebar button{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:10px;
+  background:#1a1a1a;
+  color:#fff;
+  cursor:pointer;
+  transition:.3s;
+  text-align:left;
+}
+.sidebar button:hover{
+  background:var(--accent);
+  color:#000;
+  transform:translateX(6px);
+}
+
+/* VIEWER */
+.viewer{
+  background:var(--panel);
+  border-radius:16px;
+  padding:30px;
+  min-height:520px;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
+  animation:fade .4s ease;
+}
+.viewer h2{
+  color:var(--accent);
+  margin-bottom:10px;
+}
+video{
+  max-width:100%;
+  max-height:420px;
+  border-radius:14px;
+  background:#000;
+}
+.viewer p{
+  opacity:.7;
   font-size:14px;
-  letter-spacing:2px;
-  animation:pulse 2.5s infinite;
-  position:relative;
+  margin-top:12px;
+  text-align:center;
 }
 
-.anatomy::after{
-  content:"ATHLETE";
-  opacity:.15;
-  font-size:60px;
-  position:absolute;
+@keyframes fade{
+  from{opacity:0;transform:scale(.96)}
+  to{opacity:1;transform:scale(1)}
 }
 
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.05)}
-  100%{transform:scale(1)}
-}
-
-.exercise-list{
-  background:#111;
-  padding:25px;
-  border-radius:18px
-}
-
-.exercise-list li{
-  margin:10px 0;
-  list-style:none;
-  padding-left:10px;
-  border-left:3px solid #00c853
-}
-
+/* FOOTER */
 footer{
   text-align:center;
   padding:30px;
-  opacity:.7
+  opacity:.6;
 }
-footer a{color:#00c853;text-decoration:none}
+footer a{
+  color:var(--accent);
+  text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Exercise Library</h1>
-<p>Victor-style anatomy athlete performing movements</p>
-</header>
+<!-- NAV -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="bmr.html">BMR</a>
+  <a href="fitness-facts.html">Fitness Facts</a>
+  <a href="blog.html">Blog</a>
+  <a href="videos.html">Videos</a>
+  <a href="exercises.html">Exercises</a>
+</nav>
 
-<section>
-
-<!-- CHEST -->
-<div class="exercise-block">
-  <div class="anatomy">CHEST</div>
-  <div class="exercise-list">
-    <h2>Chest Exercises</h2>
-    <ul>
-      <li>Barbell Bench Press</li>
-      <li>Dumbbell Press</li>
-      <li>Incline Bench Press</li>
-      <li>Cable Fly</li>
-      <li>Push-Ups</li>
-    </ul>
-  </div>
-</div>
-
-<!-- BACK -->
-<div class="exercise-block">
-  <div class="anatomy">BACK</div>
-  <div class="exercise-list">
-    <h2>Back Exercises</h2>
-    <ul>
-      <li>Pull-Ups</li>
-      <li>Lat Pulldown</li>
-      <li>Barbell Row</li>
-      <li>Seated Cable Row</li>
-      <li>Deadlift</li>
-    </ul>
-  </div>
-</div>
-
-<!-- LEGS -->
-<div class="exercise-block">
-  <div class="anatomy">LEGS</div>
-  <div class="exercise-list">
-    <h2>Leg Exercises</h2>
-    <ul>
-      <li>Squats</li>
-      <li>Leg Press</li>
-      <li>Lunges</li>
-      <li>Leg Curl</li>
-      <li>Calf Raises</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ARMS -->
-<div class="exercise-block">
-  <div class="anatomy">ARMS</div>
-  <div class="exercise-list">
-    <h2>Arm Exercises</h2>
-    <ul>
-      <li>Bicep Curls</li>
-      <li>Hammer Curls</li>
-      <li>Tricep Pushdowns</li>
-      <li>Skull Crushers</li>
-      <li>Dips</li>
-    </ul>
-  </div>
-</div>
-
-<!-- ABS -->
-<div class="exercise-block">
-  <div class="anatomy">ABS</div>
-  <div class="exercise-list">
-    <h2>Abs Exercises</h2>
-    <ul>
-      <li>Hanging Leg Raises</li>
-      <li>Crunches</li>
-      <li>Plank</li>
-      <li>Cable Crunch</li>
-      <li>Russian Twist</li>
-    </ul>
-  </div>
-</div>
-
+<!-- HERO -->
+<section class="hero">
+  <h1>IRONCODE MOTIVATION</h1>
+  <p>Exercise Library • Correct Form • Discipline</p>
 </section>
 
+<!-- MAIN -->
+<div class="container">
+
+  <!-- LEFT: LIST -->
+  <div class="sidebar">
+
+    <h2>Chest</h2>
+    <button onclick="show('Push-Up','pushup.mp4','Chest • Triceps • Core')">Push-Up</button>
+    <button onclick="show('Bench Press','bench.mp4','Chest • Triceps')">Bench Press</button>
+    <button onclick="show('Cable Fly','fly.mp4','Chest Isolation')">Cable Fly</button>
+
+    <h2>Back</h2>
+    <button onclick="show('Pull-Up','pullup.mp4','Back • Biceps')">Pull-Up</button>
+    <button onclick="show('Lat Pulldown','lat.mp4','Lat Width')">Lat Pulldown</button>
+    <button onclick="show('Deadlift','deadlift.mp4','Posterior Chain')">Deadlift</button>
+
+    <h2>Legs</h2>
+    <button onclick="show('Squat','squat.mp4','Quads • Glutes')">Squat</button>
+    <button onclick="show('Lunge','lunge.mp4','Unilateral Strength')">Lunge</button>
+
+    <h2>Core</h2>
+    <button onclick="show('Plank','plank.mp4','Core Stability')">Plank</button>
+    <button onclick="show('Leg Raise','legraise.mp4','Lower Abs')">Leg Raise</button>
+
+  </div>
+
+  <!-- RIGHT: VIDEO VIEW -->
+  <div class="viewer">
+    <h2 id="title">Select an Exercise</h2>
+
+    <video id="video" autoplay muted loop playsinline>
+      <source src="pushup.mp4" type="video/mp4">
+    </video>
+
+    <p id="desc">Tap any exercise to see animated anatomy-style movement.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
-© IronCode Motivation |
-<a href="index.html">Home</a>
+© IronCode Motivation — Discipline Over Motivation
 </footer>
+
+<script>
+function show(name,video,desc){
+  document.getElementById("title").innerText=name;
+  document.getElementById("video").src=video;
+  document.getElementById("desc").innerText=desc;
+}
+</script>
 
 </body>
 </html>
