@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>Daily Fitness Blog | IronCode Motivation</title>
+<meta name="description" content="Daily auto-updating fitness blog on fat loss, muscle gain, workouts, nutrition and discipline mindset." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-image-preview:large">
+
+<style>
+body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff}
+header{text-align:center;padding:90px 20px;background:#000}
+section{max-width:900px;margin:auto;padding:40px 20px}
+.card{background:#111;padding:30px;border-radius:16px}
+h1,h2{color:#00c853}
+a{color:#00c853;text-decoration:none}
+footer{text-align:center;padding:30px;opacity:.7}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Daily Fitness Blog</h1>
+<p>Fresh fitness knowledge — updated every day automatically</p>
+</header>
+
+<section>
+<div class="card" id="blogBox"></div>
+</section>
+
+<footer>
+© IronCode Motivation |
+<a href="index.html">Home</a> |
+<a href="fitness-facts.html">Fitness Facts</a> |
+<a href="videos.html">Videos</a>
+</footer>
+
+<script>
+const blogs = [
+{
+title:"How Many Calories Should You Eat to Lose Fat?",
+content:`
+<p>Fat loss happens only when you are in a calorie deficit.</p>
+<p>Most people lose fat safely by eating 400–600 kcal below maintenance.</p>
+<p>Strength training preserves muscle while dieting.</p>
+<p>👉 Use our <a href="bmr.html">BMR & Calorie Calculator</a>.</p>
+`
+},
+{
+title:"Fat Loss vs Weight Loss – What Really Matters?",
+content:`
+<p>Weight loss includes water, muscle and fat.</p>
+<p>Fat loss focuses on preserving muscle while reducing fat.</p>
+<p>High protein intake and resistance training are key.</p>
+<p>Watch <a href="videos.html">Workout Motivation Videos</a>.</p>
+`
+},
+{
+title:"How Much Protein Do You Need Per Day?",
+content:`
+<p>Protein intake of 1.6–2.2g per kg bodyweight is ideal.</p>
+<p>Protein improves muscle recovery and fat loss.</p>
+<p>Low protein diets slow progress.</p>
+`
+},
+{
+title:"Why Discipline Beats Motivation Every Time",
+content:`
+<p>Motivation is temporary. Discipline builds habits.</p>
+<p>Training when motivation is low creates consistency.</p>
+<p>IronCode follows disc
