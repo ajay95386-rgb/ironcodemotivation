@@ -9,8 +9,8 @@
   <!-- Google Discover -->
   <meta name="robots" content="max-image-preview:large">
 
-  <title>IronCode Motivation | Fitness Tools, Calculators & Discipline</title>
-  <meta name="description" content="IronCode Motivation – Fitness discipline, BMR & calorie calculators, protein intake, workouts and mindset." />
+  <title>IronCode Motivation | Fitness Tools, Discipline & Calculators</title>
+  <meta name="description" content="IronCode Motivation – Fitness discipline, BMR & calorie calculators, workouts and mindset." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Social Preview -->
@@ -30,7 +30,7 @@
     "thumbnailUrl": "https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
     "uploadDate": "2024-01-01",
     "contentUrl": "https://www.youtube.com/watch?v=Zv_xvvoHw6w",
-    "embedUrl": "https://www.youtube.com/embed/Zv_xvvoHw6w"
+    "embedUrl": "https://www.youtube.com/embed/videoseries?list=PLMY2oMQzbBSBp2yKUf3vOgkaATIHLX4xm"
   }
   </script>
 
@@ -66,7 +66,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: url("preview.jpg") center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url("preview.jpg") center/cover no-repeat;
+      padding: 20px;
     }
 
     h1 {
@@ -121,7 +122,7 @@
       border-radius: 14px;
     }
 
-    input, select, button {
+    input, button {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
@@ -170,7 +171,6 @@
   <div class="buttons">
     <a class="btn yt" href="https://www.youtube.com/@ironcodemotivation" target="_blank">YouTube</a>
     <a class="btn ig" href="https://www.instagram.com/ironcodemotivation" target="_blank">Instagram</a>
-    <a class="btn web" href="bmr.html">Fitness Tools</a>
     <a class="btn web" href="fitness-facts.html">Fitness Facts</a>
   </div>
 </section>
@@ -179,7 +179,7 @@
   <h2>Fitness Tools</h2>
 
   <div class="card">
-    <h3>BMR & Calorie Calculator</h3>
+    <h3>BMR Calculator</h3>
     <input id="weight" placeholder="Weight (kg)">
     <input id="height" placeholder="Height (cm)">
     <input id="age" placeholder="Age">
@@ -188,17 +188,15 @@
   </div>
 
   <div class="card">
-    <h3>Protein Intake Calculator</h3>
+    <h3>Protein Intake</h3>
     <input id="pweight" placeholder="Weight (kg)">
     <button onclick="calcProtein()">Calculate</button>
     <p id="proteinResult"></p>
   </div>
 </section>
 
+<!-- ✅ SINGLE, CLEAN VIDEO SECTION -->
 <section id="videos" class="section">
-  <h2>Latest IronCode Motivation Videos</h2>
-
-  <section id="videos" class="section">
   <h2>Latest IronCode Motivation Videos</h2>
 
   <iframe
@@ -216,19 +214,11 @@
   </p>
 </section>
 
-
-  <p style="margin-top:12px; opacity:0.7; font-size:14px;">
-    🔄 New videos are added automatically from our YouTube channel.
-  </p>
-</section>
-
-
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
 </section>
 
-<!-- ✅ FOOTER ADDED HERE -->
 <footer>
   © IronCode Motivation — Discipline Over Motivation <br><br>
   <a href="about.html">About</a> |
@@ -246,15 +236,12 @@
 
   setInterval(() => {
     const el = document.getElementById("typeText");
-    if (!del) {
-      el.innerText = texts[i].slice(0, ++j);
-      if (j === texts[i].length) del = true;
+    if (!del && j <= texts[i].length) {
+      el.textContent = texts[i].slice(0, j++);
     } else {
-      el.innerText = texts[i].slice(0, --j);
-      if (j === 0) {
-        del = false;
-        i = (i + 1) % texts.length;
-      }
+      del = true;
+      el.textContent = texts[i].slice(0, j--);
+      if (j < 0) { del = false; i = (i + 1) % texts.length; }
     }
   }, 100);
 
