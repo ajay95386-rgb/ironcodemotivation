@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://ajay95386-rgb.github.io/ironcodemotivation/</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/index.html</loc>
-    <priority>0.9</priority>
+    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/bmr.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/fitness-facts.html</loc>
+    <changefreq>daily</changefreq>
   </url>
 
   <url>
     <loc>https://ajay95386-rgb.github.io/ironcodemotivation/videos.html</loc>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/blog.html</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/about.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/contact.html</loc>
-    <priority>0.6</priority>
+    <loc>https://ajay95386-rgb.github.io/ironcodemotivation/exercises.html</loc>
+    <changefreq>weekly</changefreq>
   </url>
 
 </urlset>
