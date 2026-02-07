@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exercises | IronCode Motivation</title>
+
+<meta name="description" content="Visual exercise guide with animated anatomy-style athlete performing chest, back, legs, arms and abs exercises." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b0b0b;
+  color:#fff
+}
+
+header{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(#000c,#000c),
+  url("https://images.unsplash.com/photo-1599058917212-d750089bc07d?auto=format&fit=crop&w=1600&q=80")
+  center/cover no-repeat
+}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px
+}
+
+h1{font-size:48px}
+h2{color:#00c853;margin-bottom:20px}
+
+.exercise-block{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  align-items:center;
+  margin-bottom:80px
+}
+
+.anatomy{
+  height:320px;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at center,#444 0%,#111 70%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  letter-spacing:2px;
+  animation:pulse 2.5s infinite;
+  position:relative;
+}
+
+.anatomy::after{
+  content:"ATHLETE";
+  opacity:.15;
+  font-size:60px;
+  position:absolute;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+.exercise-list{
+  background:#111;
+  padding:25px;
+  border-radius:18px
+}
+
+.exercise-list li{
+  margin:10px 0;
+  list-style:none;
+  padding-left:10px;
+  border-left:3px solid #00c853
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.7
+}
+footer a{color:#00c853;text-decoration:none}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Exercise Library</h1>
+<p>Victor-style anatomy athlete performing movements</p>
+</header>
+
+<section>
+
+<!-- CHEST -->
+<div class="exercise-block">
+  <div class="anatomy">CHEST</div>
+  <div class="exercise-list">
+    <h2>Chest Exercises</h2>
+    <ul>
+      <li>Barbell Bench Press</li>
+      <li>Dumbbell Press</li>
+      <li>Incline Bench Press</li>
+      <li>Cable Fly</li>
+      <li>Push-Ups</li>
+    </ul>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="exercise-block">
+  <div class="anatomy">BACK</div>
+  <div class="exercise-list">
+    <h2>Back Exercises</h2>
+    <ul>
+      <li>Pull-Ups</li>
+      <li>Lat Pulldown</li>
+      <li>Barbell Row</li>
+      <li>Seated Cable Row</li>
+      <li>Deadlift</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEGS -->
+<div class="exercise-block">
+  <div class="anatomy">LEGS</div>
+  <div class="exercise-list">
+    <h2>Leg Exercises</h2>
+    <ul>
+      <li>Squats</li>
+      <li>Leg Press</li>
+      <li>Lunges</li>
+      <li>Leg Curl</li>
+      <li>Calf Raises</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ARMS -->
+<div class="exercise-block">
+  <div class="anatomy">ARMS</div>
+  <div class="exercise-list">
+    <h2>Arm Exercises</h2>
+    <ul>
+      <li>Bicep Curls</li>
+      <li>Hammer Curls</li>
+      <li>Tricep Pushdowns</li>
+      <li>Skull Crushers</li>
+      <li>Dips</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ABS -->
+<div class="exercise-block">
+  <div class="anatomy">ABS</div>
+  <div class="exercise-list">
+    <h2>Abs Exercises</h2>
+    <ul>
+      <li>Hanging Leg Raises</li>
+      <li>Crunches</li>
+      <li>Plank</li>
+      <li>Cable Crunch</li>
+      <li>Russian Twist</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<footer>
+© IronCode Motivation |
+<a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>
