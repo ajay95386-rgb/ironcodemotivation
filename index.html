@@ -3,98 +3,248 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ✅ Google Search Console Verification -->
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="n-gRvN96c2G8EKXsz5hG9p4E3vj4pNpOHtL02fZ_0pY" />
 
-  <!-- ✅ SEO Basics -->
-  <title>IronCode Motivation | Fitness, Discipline & Calculators</title>
-  <meta name="description" content="IronCode Motivation – Fitness motivation, calorie calculators, BMR tools, workouts, and discipline-based training." />
+  <title>IronCode Motivation | Fitness Tools, Calculators & Discipline</title>
+  <meta name="description" content="IronCode Motivation – Fitness discipline, BMR & calorie calculators, protein intake, workouts and mindset." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ Social Preview -->
+  <!-- Social Preview -->
   <meta property="og:title" content="IronCode Motivation" />
   <meta property="og:description" content="Discipline over motivation. Fitness tools, workouts & mindset." />
   <meta property="og:image" content="https://ajay95386-rgb.github.io/ironcodemotivation/preview.jpg" />
   <meta property="og:url" content="https://ajay95386-rgb.github.io/ironcodemotivation/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Styles -->
-  <link rel="stylesheet" href="style.css">
+  <!-- VIDEO SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "IronCode Motivation Fitness Videos",
+    "description": "Fitness motivation, workouts, discipline mindset.",
+    "thumbnailUrl": "https://ajay95386-rgb.github.io/ironcodemotivation/preview.jpg",
+    "uploadDate": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "IronCode Motivation"
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: 12px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url("preview.jpg") center/cover no-repeat;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .type {
+      font-size: 22px;
+      opacity: 0.9;
+      height: 30px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 8px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .yt { background: #ff0000; }
+    .ig { background: #e1306c; }
+    .web { background: #00c853; }
+
+    .section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      background: #00c853;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="#home">Home</a>
-    <a href="#videos">Videos</a>
-    <a href="#tools">Tools</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#tools">Tools</a>
+  <a href="#videos">Videos</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero reveal">
-    <h1>IRONCODE MOTIVATION</h1>
-    <p>Discipline over motivation. Consistency over excuses.</p>
+<section id="home" class="hero">
+  <h1>IRONCODE MOTIVATION</h1>
+  <div class="type" id="typeText"></div>
 
-    <div class="buttons">
-      <a class="btn primary" href="https://www.youtube.com/@ironcodemotivation" target="_blank">Watch on YouTube</a>
-      <a class="btn secondary" href="https://www.instagram.com/ironcodemotivation" target="_blank">Follow on Instagram</a>
-    </div>
-  </section>
+  <div class="buttons">
+    <a class="btn yt" href="https://www.youtube.com/@ironcodemotivation" target="_blank">YouTube</a>
+    <a class="btn ig" href="https://www.instagram.com/ironcodemotivation" target="_blank">Instagram</a>
+    <a class="btn web" href="https://ajay95386-rgb.github.io/ironcodemotivation/">Website</a>
+  </div>
+</section>
 
-  <!-- STATS -->
-  <section class="stats reveal">
-    <div><h2>250+</h2><p>Videos</p></div>
-    <div><h2>5.7L+</h2><p>Views</p></div>
-    <div><h2>10+</h2><p>Years</p></div>
-  </section>
+<section id="tools" class="section">
+  <h2>Fitness Tools</h2>
 
-  <!-- VIDEOS -->
-  <section id="videos" class="section reveal">
-    <h2>Featured Videos</h2>
+  <!-- BMR -->
+  <div class="card">
+    <h3>BMR & Calories</h3>
+    <input id="weight" placeholder="Weight (kg)">
+    <input id="height" placeholder="Height (cm)">
+    <input id="age" placeholder="Age">
+    <button onclick="calcBMR()">Calculate</button>
+    <p id="bmrResult"></p>
+  </div>
 
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/Zv_xvvoHw6w" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/jt3r-z0niRQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/GdG4-WHF3GY" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/JPD4k6PXSpc" allowfullscreen></iframe>
-    </div>
-  </section>
+  <!-- Protein -->
+  <div class="card">
+    <h3>Protein Intake</h3>
+    <input id="pweight" placeholder="Weight (kg)">
+    <button onclick="calcProtein()">Calculate</button>
+    <p id="proteinResult"></p>
+  </div>
 
-  <!-- TOOLS -->
-  <section id="tools" class="section reveal">
-    <h2>Fitness Tools</h2>
+  <!-- Goal -->
+  <div class="card">
+    <h3>Goal Selector</h3>
+    <select id="goal">
+      <option>Fat Loss</option>
+      <option>Muscle Gain</option>
+    </select>
+    <button onclick="goalResult()">Show</button>
+    <p id="goalText"></p>
+  </div>
+</section>
 
-    <div class="card">🔥 BMR & Calorie Calculator</div>
-    <div class="card">💪 Protein Intake Calculator</div>
-    <div class="card">⚖️ Fat Loss vs Muscle Gain Selector</div>
-    <div class="card">🏋️ Workout Split Recommender</div>
-  </section>
+<section id="videos" class="section">
+  <h2>Featured Videos</h2>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zv_xvvoHw6w" allowfullscreen></iframe>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section reveal">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
-  </section>
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © IronCode Motivation | Discipline Over Motivation
-  </footer>
+<footer>
+  © IronCode Motivation — Discipline Over Motivation
+</footer>
 
-  <!-- SCROLL ANIMATION -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-    window.addEventListener("scroll", () => {
-      reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-          el.classList.add("active");
-        }
-      });
-    });
-  </script>
+<script>
+  const texts = [
+    "Discipline over motivation.",
+    "Consistency builds champions.",
+    "No excuses. Just work."
+  ];
+  let i = 0, j = 0, current = "", deleting = false;
+  setInterval(() => {
+    const el = document.getElementById("typeText");
+    if (!deleting && j <= texts[i].length) {
+      current = texts[i].slice(0, j++);
+    } else {
+      deleting = true;
+      current = texts[i].slice(0, j--);
+      if (j < 0) {
+        deleting = false;
+        i = (i + 1) % texts.length;
+      }
+    }
+    el.innerText = current;
+  }, 100);
+
+  function calcBMR() {
+    const w = weight.value;
+    const h = height.value;
+    const a = age.value;
+    const bmr = 10*w + 6.25*h - 5*a + 5;
+    bmrResult.innerText = "BMR: " + Math.round(bmr) + " kcal/day";
+  }
+
+  function calcProtein() {
+    proteinResult.innerText = "Protein: " + (pweight.value * 2) + " g/day";
+  }
+
+  function goalResult() {
+    goalText.innerText = goal.value === "Fat Loss"
+      ? "Stay in calorie deficit + cardio."
+      : "Eat surplus + heavy training.";
+  }
+</script>
 
 </body>
 </html>
