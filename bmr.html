@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMR & Calorie Calculator | IronCode Motivation</title>
+  <meta name="description" content="Calculate your BMR, maintenance calories, fat loss or muscle gain calories accurately." />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="bmr.html">BMR</a>
+  <a href="videos.html">Videos</a>
+</nav>
+
+<section class="section reveal">
+  <h1>BMR & Calorie Calculator</h1>
+
+  <label>Gender</label>
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <label>Age</label>
+  <input type="number" id="age">
+
+  <label>Height (cm)</label>
+  <input type="number" id="height">
+
+  <label>Weight (kg)</label>
+  <input type="number" id="weight">
+
+  <label>Activity Level</label>
+  <select id="activity">
+    <option value="1.2">Sedentary</option>
+    <option value="1.375">Light</option>
+    <option value="1.55">Moderate</option>
+    <option value="1.725">Active</option>
+  </select>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="result"></div>
+</section>
+
+<script>
+function calculate() {
+  const g = gender.value;
+  const a = age.value;
+  const h = height.value;
+  const w = weight.value;
+  const act = activity.value;
+
+  let bmr = g === "male"
+    ? 10*w + 6.25*h - 5*a + 5
+    : 10*w + 6.25*h - 5*a - 161;
+
+  let calories = Math.round(bmr * act);
+
+  result.innerHTML = `
+    <h3>Your Results</h3>
+    <p>BMR: ${Math.round(bmr)} kcal</p>
+    <p>Maintenance: ${calories} kcal</p>
+    <p>Fat Loss: ${calories - 500} kcal</p>
+    <p>Muscle Gain: ${calories + 300} kcal</p>
+  `;
+}
+</script>
+
+</body>
+</html>
