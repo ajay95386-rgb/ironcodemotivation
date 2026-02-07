@@ -6,6 +6,9 @@
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="n-gRvN96c2G8EKXsz5hG9p4E3vj4pNpOHtL02fZ_0pY" />
 
+  <!-- Google Discover Optimization -->
+  <meta name="robots" content="max-image-preview:large">
+
   <title>IronCode Motivation | Fitness Tools, Calculators & Discipline</title>
   <meta name="description" content="IronCode Motivation – Fitness discipline, BMR & calorie calculators, protein intake, workouts and mindset." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +20,17 @@
   <meta property="og:url" content="https://ajay95386-rgb.github.io/ironcodemotivation/" />
   <meta property="og:type" content="website" />
 
-  <!-- VIDEO SCHEMA -->
+  <!-- VIDEO STRUCTURED DATA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "IronCode Motivation Fitness Videos",
+    "name": "IronCode Motivation – Discipline Over Motivation",
     "description": "Fitness motivation, workouts, discipline mindset.",
-    "thumbnailUrl": "https://ajay95386-rgb.github.io/ironcodemotivation/preview.jpg",
+    "thumbnailUrl": "https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
     "uploadDate": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "IronCode Motivation"
-    }
+    "contentUrl": "https://www.youtube.com/watch?v=Zv_xvvoHw6w",
+    "embedUrl": "https://www.youtube.com/embed/Zv_xvvoHw6w"
   }
   </script>
 
@@ -45,7 +46,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       padding: 12px;
       text-align: center;
       z-index: 10;
@@ -80,46 +81,52 @@
     }
 
     .buttons {
-      margin-top: 25px;
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      margin: 8px;
-      border-radius: 25px;
+      padding: 14px 26px;
+      border-radius: 30px;
       text-decoration: none;
-      color: #fff;
       font-weight: bold;
-      transition: transform 0.2s;
+      color: #fff;
+      transition: transform 0.25s, box-shadow 0.25s;
+      min-width: 180px;
+      text-align: center;
     }
 
     .btn:hover {
-      transform: scale(1.05);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(255,255,255,0.25);
     }
 
     .yt { background: #ff0000; }
-    .ig { background: #e1306c; }
-    .web { background: #00c853; }
+    .ig { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+    .web { background: #00c853; color: #000; }
 
     .section {
-      padding: 80px 20px;
+      padding: 90px 20px;
       max-width: 900px;
       margin: auto;
     }
 
     .card {
       background: #111;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
+      padding: 22px;
+      margin: 18px 0;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
     }
 
     input, select, button {
       width: 100%;
       padding: 10px;
-      margin-top: 8px;
-      border-radius: 6px;
+      margin-top: 10px;
+      border-radius: 8px;
       border: none;
     }
 
@@ -130,9 +137,13 @@
       cursor: pointer;
     }
 
+    iframe {
+      border-radius: 14px;
+    }
+
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
       opacity: 0.6;
     }
   </style>
@@ -147,23 +158,25 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="home" class="hero">
   <h1>IRONCODE MOTIVATION</h1>
   <div class="type" id="typeText"></div>
 
+  <!-- REPLACED BUTTONS (PROFESSIONAL UI) -->
   <div class="buttons">
     <a class="btn yt" href="https://www.youtube.com/@ironcodemotivation" target="_blank">YouTube</a>
     <a class="btn ig" href="https://www.instagram.com/ironcodemotivation" target="_blank">Instagram</a>
-    <a class="btn web" href="https://ajay95386-rgb.github.io/ironcodemotivation/">Website</a>
+    <a class="btn web" href="bmr.html">Fitness Tools</a>
   </div>
 </section>
 
+<!-- TOOLS -->
 <section id="tools" class="section">
   <h2>Fitness Tools</h2>
 
-  <!-- BMR -->
   <div class="card">
-    <h3>BMR & Calories</h3>
+    <h3>BMR & Calorie Calculator</h3>
     <input id="weight" placeholder="Weight (kg)">
     <input id="height" placeholder="Height (cm)">
     <input id="age" placeholder="Age">
@@ -171,31 +184,42 @@
     <p id="bmrResult"></p>
   </div>
 
-  <!-- Protein -->
   <div class="card">
-    <h3>Protein Intake</h3>
+    <h3>Protein Intake Calculator</h3>
     <input id="pweight" placeholder="Weight (kg)">
     <button onclick="calcProtein()">Calculate</button>
     <p id="proteinResult"></p>
   </div>
 
-  <!-- Goal -->
   <div class="card">
-    <h3>Goal Selector</h3>
+    <h3>Fat Loss vs Muscle Gain</h3>
     <select id="goal">
       <option>Fat Loss</option>
       <option>Muscle Gain</option>
     </select>
-    <button onclick="goalResult()">Show</button>
+    <button onclick="goalResult()">Show Result</button>
     <p id="goalText"></p>
   </div>
 </section>
 
+<!-- CALORIE DEFICIT PLANNER -->
+<section class="section">
+  <h2>Calorie Deficit Planner</h2>
+  <div class="card">
+    <p>🔥 500 kcal deficit ≈ 0.5 kg fat loss / week</p>
+    <p>⚠️ Never eat below BMR</p>
+    <p>✅ Fat loss: 300–500 kcal deficit</p>
+    <p>💪 Muscle gain: 200–300 kcal surplus</p>
+  </div>
+</section>
+
+<!-- VIDEOS -->
 <section id="videos" class="section">
-  <h2>Featured Videos</h2>
+  <h2>Featured Video</h2>
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zv_xvvoHw6w" allowfullscreen></iframe>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
@@ -211,27 +235,24 @@
     "Consistency builds champions.",
     "No excuses. Just work."
   ];
-  let i = 0, j = 0, current = "", deleting = false;
+  let i = 0, j = 0, deleting = false;
+
   setInterval(() => {
     const el = document.getElementById("typeText");
-    if (!deleting && j <= texts[i].length) {
-      current = texts[i].slice(0, j++);
+    if (!deleting) {
+      el.innerText = texts[i].slice(0, ++j);
+      if (j === texts[i].length) deleting = true;
     } else {
-      deleting = true;
-      current = texts[i].slice(0, j--);
-      if (j < 0) {
+      el.innerText = texts[i].slice(0, --j);
+      if (j === 0) {
         deleting = false;
         i = (i + 1) % texts.length;
       }
     }
-    el.innerText = current;
   }, 100);
 
   function calcBMR() {
-    const w = weight.value;
-    const h = height.value;
-    const a = age.value;
-    const bmr = 10*w + 6.25*h - 5*a + 5;
+    const bmr = 10*weight.value + 6.25*height.value - 5*age.value + 5;
     bmrResult.innerText = "BMR: " + Math.round(bmr) + " kcal/day";
   }
 
@@ -240,9 +261,10 @@
   }
 
   function goalResult() {
-    goalText.innerText = goal.value === "Fat Loss"
-      ? "Stay in calorie deficit + cardio."
-      : "Eat surplus + heavy training.";
+    goalText.innerText =
+      goal.value === "Fat Loss"
+        ? "Stay in deficit + cardio"
+        : "Eat surplus + heavy training";
   }
 </script>
 
