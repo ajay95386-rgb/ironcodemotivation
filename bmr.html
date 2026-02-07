@@ -1,72 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BMR & Calorie Calculator | IronCode Motivation</title>
-  <meta name="description" content="Calculate your BMR, maintenance calories, fat loss or muscle gain calories accurately." />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>BMR & Calorie Calculator | IronCode Motivation</title>
 
-  <link rel="stylesheet" href="style.css">
+<meta name="description" content="Calculate BMR, fat loss calories and weight gain calories. Science-based fitness tools by IronCode Motivation.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:title" content="BMR & Calorie Calculator">
+<meta property="og:description" content="Find your maintenance, fat loss and muscle gain calories.">
+<meta property="og:type" content="website">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0b0b0b;
+  color:#fff;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:80px 20px;
+}
+h1,h2{color:#00c853}
+.card{
+  background:#111;
+  padding:22px;
+  margin:20px 0;
+  border-radius:14px;
+}
+input,select,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+}
+button{
+  background:#00c853;
+  font-weight:bold;
+  cursor:pointer;
+}
+.result{
+  margin-top:15px;
+  line-height:1.6;
+}
+.back{
+  display:inline-block;
+  margin-top:30px;
+  color:#00c853;
+  text-decoration:none;
+}
+</style>
 </head>
+
 <body>
 
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="bmr.html">BMR</a>
-  <a href="videos.html">Videos</a>
-</nav>
+<div class="container">
 
-<section class="section reveal">
-  <h1>BMR & Calorie Calculator</h1>
+<h1>BMR & Calorie Calculator</h1>
+<p>Use this tool to calculate your <b>maintenance, fat loss, and weight gain calories</b>.</p>
 
-  <label>Gender</label>
-  <select id="gender">
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-  </select>
+<div class="card">
+<h2>Enter Your Details</h2>
 
-  <label>Age</label>
-  <input type="number" id="age">
+<input id="weight" type="number" placeholder="Weight (kg)">
+<input id="height" type="number" placeholder="Height (cm)">
+<input id="age" type="number" placeholder="Age">
 
-  <label>Height (cm)</label>
-  <input type="number" id="height">
+<select id="activity">
+  <option value="1.2">Sedentary (no exercise)</option>
+  <option value="1.375">Light exercise (1–3 days)</option>
+  <option value="1.55">Moderate exercise (3–5 days)</option>
+  <option value="1.725">Heavy training (6–7 days)</option>
+</select>
 
-  <label>Weight (kg)</label>
-  <input type="number" id="weight">
+<button onclick="calculate()">Calculate Calories</button>
 
-  <label>Activity Level</label>
-  <select id="activity">
-    <option value="1.2">Sedentary</option>
-    <option value="1.375">Light</option>
-    <option value="1.55">Moderate</option>
-    <option value="1.725">Active</option>
-  </select>
+<div class="result" id="output"></div>
+</div>
 
-  <button onclick="calculate()">Calculate</button>
+<div class="card">
+<h2>How to Use This</h2>
+<p>
+🔥 <b>Fat loss:</b> Eat at deficit calories<br>
+💪 <b>Muscle gain:</b> Eat at surplus calories<br>
+⚠️ Never eat below your BMR
+</p>
+</div>
 
-  <div id="result"></div>
-</section>
+<a class="back" href="index.html">← Back to Home</a>
+
+</div>
 
 <script>
-function calculate() {
-  const g = gender.value;
-  const a = age.value;
-  const h = height.value;
+function calculate(){
   const w = weight.value;
+  const h = height.value;
+  const a = age.value;
   const act = activity.value;
 
-  let bmr = g === "male"
-    ? 10*w + 6.25*h - 5*a + 5
-    : 10*w + 6.25*h - 5*a - 161;
+  if(!w || !h || !a){
+    output.innerHTML = "❌ Please fill all fields";
+    return;
+  }
 
-  let calories = Math.round(bmr * act);
+  const bmr = (10*w) + (6.25*h) - (5*a) + 5;
+  const maintenance = Math.round(bmr * act);
+  const fatLoss = maintenance - 500;
+  const muscleGain = maintenance + 400;
 
-  result.innerHTML = `
-    <h3>Your Results</h3>
-    <p>BMR: ${Math.round(bmr)} kcal</p>
-    <p>Maintenance: ${calories} kcal</p>
-    <p>Fat Loss: ${calories - 500} kcal</p>
-    <p>Muscle Gain: ${calories + 300} kcal</p>
+  output.innerHTML = `
+  <b>BMR:</b> ${Math.round(bmr)} kcal/day<br><br>
+  🔥 <b>Maintenance:</b> ${maintenance} kcal/day<br>
+  🥗 <b>Fat Loss:</b> ${fatLoss} kcal/day<br>
+  🍗 <b>Muscle Gain:</b> ${muscleGain} kcal/day
   `;
 }
 </script>
