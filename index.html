@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Google Verification -->
 <meta name="google-site-verification" content="n-gRvN96c2G8EKXsz5hG9p4E3vj4pNpOHtL02fZ_0pY" />
-
-<!-- Google Discover -->
 <meta name="robots" content="max-image-preview:large">
 
 <title>IronCode Motivation | Fitness, BMR, Diet & Workouts</title>
 <meta name="description" content="Fitness motivation, BMR calculator, fat loss & weight gain diet plans, workouts and discipline mindset." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
 <meta property="og:title" content="IronCode Motivation" />
 <meta property="og:description" content="Discipline over motivation. Fitness tools & workouts." />
 <meta property="og:image" content="preview.jpg" />
@@ -23,15 +19,11 @@
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
- "@graph":[
-  {
-   "@type":"VideoObject",
-   "name":"IronCode Motivation – Discipline Over Motivation",
-   "description":"Fitness motivation and workouts.",
-   "thumbnailUrl":"https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
-   "embedUrl":"https://www.youtube.com/embed/Zv_xvvoHw6w"
-  }
- ]
+ "@type":"VideoObject",
+ "name":"IronCode Motivation – Discipline Over Motivation",
+ "description":"Fitness motivation and workouts.",
+ "thumbnailUrl":"https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
+ "embedUrl":"https://www.youtube.com/embed/Zv_xvvoHw6w"
 }
 </script>
 
@@ -44,26 +36,17 @@
   {
    "@type":"Question",
    "name":"How many calories should I eat to lose fat?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Most people lose fat by eating 400–600 calories below maintenance while maintaining protein intake."
-   }
+   "acceptedAnswer":{"@type":"Answer","text":"Eat 400–600 calories below maintenance."}
   },
   {
    "@type":"Question",
-   "name":"How do I calculate my BMR?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"You can calculate BMR using body weight, height and age. IronCode Motivation provides a free BMR calculator."
-   }
+   "name":"Is cardio required for fat loss?",
+   "acceptedAnswer":{"@type":"Answer","text":"No. Calorie deficit matters most."}
   },
   {
    "@type":"Question",
-   "name":"Is cardio necessary for fat loss?",
-   "acceptedAnswer":{
-    "@type":"Answer",
-    "text":"Fat loss depends on calorie deficit. Cardio helps but is not mandatory if diet is controlled."
-   }
+   "name":"How much protein do I need?",
+   "acceptedAnswer":{"@type":"Answer","text":"1.6–2.2g per kg bodyweight."}
   }
  ]
 }
@@ -72,7 +55,12 @@
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff}
-nav{position:fixed;top:0;width:100%;background:#000;padding:12px;text-align:center;z-index:10}
+
+nav{
+position:fixed;top:0;width:100%;
+background:rgba(0,0,0,.9);
+padding:12px;text-align:center;z-index:10
+}
 nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
 
 .hero{
@@ -82,51 +70,67 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(#0009,#0009),url(preview.jpg) center/cover
+background:
+linear-gradient(#000b,#000b),
+url("https://images.unsplash.com/photo-1599058917212-d750089bc07d?auto=format&fit=crop&w=1600&q=80")
+center/cover no-repeat;
 }
 
-.section{padding:100px 20px;max-width:1000px;margin:auto}
-h1{font-size:48px}
-.buttons{margin-top:30px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+h1{font-size:52px;letter-spacing:2px}
+.section{padding:110px 20px;max-width:1100px;margin:auto}
 
+.buttons{margin-top:35px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
 .btn{
-padding:14px 28px;
-border-radius:30px;
-font-weight:bold;
-text-decoration:none;
-color:#fff;
+padding:14px 30px;border-radius:30px;
+font-weight:bold;text-decoration:none;color:#fff;
 transition:.3s
 }
-.btn:hover{transform:translateY(-5px)}
+.btn:hover{transform:translateY(-6px)}
 .yt{background:#ff0000}
 .ig{background:#c13584}
 .web{background:#00c853;color:#000}
 
 .card{
-background:#111;
-padding:22px;
-margin:18px 0;
-border-radius:14px
+background:#111;padding:24px;margin:20px 0;
+border-radius:16px;
+transition:.4s
 }
+.card:hover{transform:scale(1.03)}
 
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-text-align:center
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;text-align:center
 }
-.stat h3{font-size:36px;color:#00c853}
+.stat h3{font-size:40px;color:#00c853}
 
 .video-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+
+.exercise-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px
+}
+.exercise{
+height:260px;
+border-radius:16px;
+display:flex;
+align-items:end;
+padding:18px;
+background-size:cover;
+background-position:center;
+font-weight:bold;
+letter-spacing:1px;
 }
 
 .reveal{opacity:0;transform:translateY(60px);transition:.9s}
 .reveal.active{opacity:1;transform:translateY(0)}
 
-footer{text-align:center;padding:30px;opacity:.7}
+footer{text-align:center;padding:35px;opacity:.7}
 footer a{color:#00c853;text-decoration:none;margin:0 6px}
 </style>
 </head>
@@ -136,15 +140,16 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 <nav>
 <a href="#home">Home</a>
 <a href="#stats">Stats</a>
+<a href="#exercises">Exercises</a>
 <a href="#tools">Tools</a>
 <a href="#videos">Videos</a>
 <a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="home" class="hero">
 <h1>IRONCODE MOTIVATION</h1>
-<p>Discipline over motivation. Consistency wins.</p>
+<p>Discipline. Strength. Consistency.</p>
 
 <div class="buttons">
 <a class="btn yt" href="https://www.youtube.com/@ironcodemotivation" target="_blank">YouTube</a>
@@ -156,20 +161,30 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 <!-- STATS -->
 <section id="stats" class="section reveal">
 <h2>Our Impact</h2>
-
 <div class="stats">
-<div class="card"><h3 class="count" data-target="250">0</h3><p>Videos</p></div>
-<div class="card"><h3 class="count" data-target="570000">0</h3><p>Total Views</p></div>
-<div class="card"><h3 class="count" data-target="1690">0</h3><p>Subscribers</p></div>
+<div class="card stat"><h3 class="count" data-target="250">0</h3><p>Videos</p></div>
+<div class="card stat"><h3 class="count" data-target="570000">0</h3><p>Views</p></div>
+<div class="card stat"><h3 class="count" data-target="1690">0</h3><p>Subscribers</p></div>
+</div>
+</section>
+
+<!-- EXERCISES -->
+<section id="exercises" class="section reveal">
+<h2>Train Like an Athlete</h2>
+
+<div class="exercise-grid">
+<div class="exercise" style="background-image:url('https://images.unsplash.com/photo-1599058917765-7e3c38baf34c')">CHEST</div>
+<div class="exercise" style="background-image:url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1')">BACK</div>
+<div class="exercise" style="background-image:url('https://images.unsplash.com/photo-1594737625785-c9caa2c48c8c')">LEGS</div>
+<div class="exercise" style="background-image:url('https://images.unsplash.com/photo-1594381898411-846e7d193883')">ARMS</div>
+<div class="exercise" style="background-image:url('https://images.unsplash.com/photo-1571019613914-85f342c55f31')">ABS</div>
 </div>
 </section>
 
 <!-- TOOLS -->
 <section id="tools" class="section reveal">
-<h2>Fitness Tools</h2>
-
+<h2>BMR & Diet Planner</h2>
 <div class="card">
-<h3>BMR & Diet Planner</h3>
 <input id="w" placeholder="Weight (kg)">
 <input id="h" placeholder="Height (cm)">
 <input id="a" placeholder="Age">
@@ -180,16 +195,13 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 
 <!-- VIDEOS -->
 <section id="videos" class="section reveal">
-<h2>Latest Videos</h2>
-
+<h2>Workout Motivation</h2>
 <div class="video-grid">
 <iframe src="https://www.youtube.com/embed/Zv_xvvoHw6w"></iframe>
 <iframe src="https://www.youtube.com/embed/jt3r-z0niRQ"></iframe>
 <iframe src="https://www.youtube.com/embed/GdG4-WHF3GY"></iframe>
 <iframe src="https://www.youtube.com/embed/JPD4k6PXSpc"></iframe>
 </div>
-
-<p style="margin-top:20px;opacity:.7">⬇ Auto-updating playlist ⬇</p>
 
 <iframe width="100%" height="420"
 src="https://www.youtube.com/embed/videoseries?list=PLMY2oMQzbBSBp2yKUf3vOgkaATIHLX4xm"
@@ -198,16 +210,10 @@ allowfullscreen></iframe>
 
 <!-- FAQ -->
 <section id="faq" class="section reveal">
-<h2>Frequently Asked Questions</h2>
-
-<div class="card"><b>How many calories should I eat to lose fat?</b><br>Eat 400–600 kcal below maintenance.</div>
-<div class="card"><b>Is cardio required?</b><br>No, calorie deficit matters most.</div>
-<div class="card"><b>How much protein do I need?</b><br>1.6–2.2 g per kg bodyweight.</div>
-</section>
-
-<section id="contact" class="section reveal">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
+<h2>Fitness FAQs</h2>
+<div class="card"><b>Calories for fat loss?</b><br>400–600 deficit.</div>
+<div class="card"><b>Cardio required?</b><br>No.</div>
+<div class="card"><b>Protein intake?</b><br>1.6–2.2 g/kg.</div>
 </section>
 
 <footer>
@@ -236,9 +242,8 @@ el.classList.add("active");
 });
 });
 
-/* COUNTERS */
-const counters=document.querySelectorAll(".count");
-counters.forEach(counter=>{
+/* Counters */
+document.querySelectorAll(".count").forEach(counter=>{
 const update=()=>{
 const target=+counter.dataset.target;
 const current=+counter.innerText;
@@ -246,8 +251,6 @@ const inc=target/80;
 if(current<target){
 counter.innerText=Math.ceil(current+inc);
 setTimeout(update,30);
-}else{
-counter.innerText=target;
 }
 };
 update();
