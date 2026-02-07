@@ -22,141 +22,112 @@
 <!-- VIDEO SCHEMA -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "VideoObject",
-      "name": "IronCode Motivation – Discipline Over Motivation",
-      "description": "Fitness motivation and workouts.",
-      "thumbnailUrl": "https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
-      "embedUrl": "https://www.youtube.com/embed/Zv_xvvoHw6w"
-    },
-    {
-      "@type": "VideoObject",
-      "name": "IronCode Motivation Playlist",
-      "description": "Auto-updating workout motivation playlist.",
-      "embedUrl": "https://www.youtube.com/embed/videoseries?list=PLMY2oMQzbBSBp2yKUf3vOgkaATIHLX4xm"
-    }
-  ]
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"VideoObject",
+   "name":"IronCode Motivation – Discipline Over Motivation",
+   "description":"Fitness motivation and workouts.",
+   "thumbnailUrl":"https://img.youtube.com/vi/Zv_xvvoHw6w/maxresdefault.jpg",
+   "embedUrl":"https://www.youtube.com/embed/Zv_xvvoHw6w"
+  }
+ ]
+}
+</script>
+
+<!-- FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"How many calories should I eat to lose fat?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Most people lose fat by eating 400–600 calories below maintenance while maintaining protein intake."
+   }
+  },
+  {
+   "@type":"Question",
+   "name":"How do I calculate my BMR?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"You can calculate BMR using body weight, height and age. IronCode Motivation provides a free BMR calculator."
+   }
+  },
+  {
+   "@type":"Question",
+   "name":"Is cardio necessary for fat loss?",
+   "acceptedAnswer":{
+    "@type":"Answer",
+    "text":"Fat loss depends on calorie deficit. Cardio helps but is not mandatory if diet is controlled."
+   }
+  }
+ ]
 }
 </script>
 
 <style>
-html{
-  scroll-behavior:smooth;
-}
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0b0b0b;
-  color:#fff;
-  -webkit-overflow-scrolling:touch;
-}
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#000;
-  padding:12px;
-  text-align:center;
-  z-index:10
-}
-nav a{
-  color:#fff;
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:bold
-}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff}
+nav{position:fixed;top:0;width:100%;background:#000;padding:12px;text-align:center;z-index:10}
+nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(#0009,#0009),url(preview.jpg) center/cover;
-  animation:fadeIn 1.5s ease
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(#0009,#0009),url(preview.jpg) center/cover
 }
 
-h1{font-size:48px;margin-bottom:10px}
-.section{
-  padding:100px 20px;
-  max-width:900px;
-  margin:auto
-}
-
-.buttons{
-  margin-top:30px;
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
-  justify-content:center
-}
+.section{padding:100px 20px;max-width:1000px;margin:auto}
+h1{font-size:48px}
+.buttons{margin-top:30px;display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
 
 .btn{
-  padding:14px 28px;
-  border-radius:30px;
-  font-weight:bold;
-  text-decoration:none;
-  color:#fff;
-  transition:transform .3s, box-shadow .3s
+padding:14px 28px;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+color:#fff;
+transition:.3s
 }
-.btn:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(255,255,255,.25)
-}
+.btn:hover{transform:translateY(-5px)}
 .yt{background:#ff0000}
 .ig{background:#c13584}
 .web{background:#00c853;color:#000}
 
 .card{
-  background:#111;
-  padding:22px;
-  margin:18px 0;
-  border-radius:14px;
-  transition:transform .4s
-}
-.card:hover{transform:scale(1.03)}
-
-input,button{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-  border-radius:8px;
-  border:none
-}
-button{
-  background:#00c853;
-  font-weight:bold;
-  cursor:pointer
+background:#111;
+padding:22px;
+margin:18px 0;
+border-radius:14px
 }
 
-iframe{border-radius:14px}
-footer{text-align:center;padding:30px;opacity:.7}
-footer a{color:#00c853;text-decoration:none;margin:0 6px}
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center
+}
+.stat h3{font-size:36px;color:#00c853}
 
 .video-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
 }
 
-/* REVEAL ANIMATION */
-.reveal{
-  opacity:0;
-  transform:translateY(60px);
-  transition:all .9s ease
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0)
-}
+.reveal{opacity:0;transform:translateY(60px);transition:.9s}
+.reveal.active{opacity:1;transform:translateY(0)}
 
-@keyframes fadeIn{
-  from{opacity:0}
-  to{opacity:1}
-}
+footer{text-align:center;padding:30px;opacity:.7}
+footer a{color:#00c853;text-decoration:none;margin:0 6px}
 </style>
 </head>
 
@@ -164,9 +135,10 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 
 <nav>
 <a href="#home">Home</a>
+<a href="#stats">Stats</a>
 <a href="#tools">Tools</a>
-<a href="#resources">Resources</a>
 <a href="#videos">Videos</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -181,6 +153,18 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 </div>
 </section>
 
+<!-- STATS -->
+<section id="stats" class="section reveal">
+<h2>Our Impact</h2>
+
+<div class="stats">
+<div class="card"><h3 class="count" data-target="250">0</h3><p>Videos</p></div>
+<div class="card"><h3 class="count" data-target="570000">0</h3><p>Total Views</p></div>
+<div class="card"><h3 class="count" data-target="1690">0</h3><p>Subscribers</p></div>
+</div>
+</section>
+
+<!-- TOOLS -->
 <section id="tools" class="section reveal">
 <h2>Fitness Tools</h2>
 
@@ -194,33 +178,9 @@ footer a{color:#00c853;text-decoration:none;margin:0 6px}
 </div>
 </section>
 
-<!-- ✅ POPULAR FITNESS RESOURCES (ADDED HERE) -->
-<section id="resources" class="section reveal">
-<h2>Popular Fitness Resources</h2>
-
-<div class="card">
-🔥 <a href="bmr.html">BMR & Calorie Calculator</a><br>
-Calculate fat loss & muscle gain calories accurately.
-</div>
-
-<div class="card">
-📊 <a href="fitness-facts.html">Daily Fitness Facts</a><br>
-Science-based fitness & nutrition facts updated regularly.
-</div>
-
-<div class="card">
-🎥 <a href="videos.html">Workout Motivation Videos</a><br>
-Gym motivation & discipline mindset videos.
-</div>
-
-<div class="card">
-📝 <a href="blog.html">Fitness Articles & Guides</a><br>
-Fat loss, muscle gain & workout strategies.
-</div>
-</section>
-
+<!-- VIDEOS -->
 <section id="videos" class="section reveal">
-<h2>Latest IronCode Motivation Videos</h2>
+<h2>Latest Videos</h2>
 
 <div class="video-grid">
 <iframe src="https://www.youtube.com/embed/Zv_xvvoHw6w"></iframe>
@@ -236,6 +196,15 @@ src="https://www.youtube.com/embed/videoseries?list=PLMY2oMQzbBSBp2yKUf3vOgkaATI
 allowfullscreen></iframe>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="section reveal">
+<h2>Frequently Asked Questions</h2>
+
+<div class="card"><b>How many calories should I eat to lose fat?</b><br>Eat 400–600 kcal below maintenance.</div>
+<div class="card"><b>Is cardio required?</b><br>No, calorie deficit matters most.</div>
+<div class="card"><b>How much protein do I need?</b><br>1.6–2.2 g per kg bodyweight.</div>
+</section>
+
 <section id="contact" class="section reveal">
 <h2>Contact</h2>
 <p>Email: <a href="mailto:ajay95386@gmail.com">ajay95386@gmail.com</a></p>
@@ -244,31 +213,45 @@ allowfullscreen></iframe>
 <footer>
 © IronCode Motivation — Discipline Over Motivation<br><br>
 <a href="about.html">About</a> |
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="#contact">Contact</a>
+<a href="privacy-policy.html">Privacy Policy</a>
 </footer>
 
 <script>
+/* BMR */
 function calc(){
 let bmr=10*w.value+6.25*h.value-5*a.value+5;
 out.innerHTML=
-"BMR: "+Math.round(bmr)+" kcal/day<br><br>"+
-"🔥 Fat loss: "+Math.round(bmr-500)+" kcal/day<br>"+
-"💪 Weight gain: "+Math.round(bmr+300)+" kcal/day";
+"BMR: "+Math.round(bmr)+" kcal/day<br>"+
+"Fat loss: "+Math.round(bmr-500)+" kcal/day<br>"+
+"Weight gain: "+Math.round(bmr+300)+" kcal/day";
 }
 
-/* SCROLL REVEAL */
+/* Reveal */
 const reveals=document.querySelectorAll(".reveal");
-const revealOnScroll=()=>{
+window.addEventListener("scroll",()=>{
 reveals.forEach(el=>{
-const top=el.getBoundingClientRect().top;
-if(top<window.innerHeight-80){
+if(el.getBoundingClientRect().top<window.innerHeight-80){
 el.classList.add("active");
 }
 });
+});
+
+/* COUNTERS */
+const counters=document.querySelectorAll(".count");
+counters.forEach(counter=>{
+const update=()=>{
+const target=+counter.dataset.target;
+const current=+counter.innerText;
+const inc=target/80;
+if(current<target){
+counter.innerText=Math.ceil(current+inc);
+setTimeout(update,30);
+}else{
+counter.innerText=target;
+}
 };
-window.addEventListener("scroll",revealOnScroll);
-revealOnScroll();
+update();
+});
 </script>
 
 </body>
